@@ -40,6 +40,7 @@ export function Navbar({ scrolled, menuOpen, setMenuOpen, onEnquire }: NavbarPro
               <MapPin size={14} /> Locate Us
             </a>
             <a href="tel:04449971111"><Phone size={14} /> 04449 971111</a>
+            <a href="tel:8098533000"><Phone size={14} /> 8098533000</a>
           </div>
         </div>
       </div>

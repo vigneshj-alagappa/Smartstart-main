@@ -65,9 +65,9 @@ export function Footer() {
           </a>
         </div>
         <div>
-          <a href="#top">Privacy</a>
+          {/*<a href="#top">Privacy</a>
           <a href="#top">Terms</a>
-          <a href="#top">Accessibility</a>
+          <a href="#top">Accessibility</a>*/}
         </div>
       </div>
     </footer>

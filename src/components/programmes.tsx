@@ -9,10 +9,11 @@ import {
 
 } from 'lucide-react';
 const programmes = [
-    { age: '1.5 – 2.5 years', name: 'Day Care', description: 'A gentle first step into group play, discovery and little routines that build confidence.', color: 'red', icon: Baby },
-    { age: '2.5 – 3.5 years', name: 'Playgroup', description: 'Busy hands, bright ideas and playful experiences that grow early language and social skills.', color: 'yellow', icon: Sparkles },
-    { age: '3.5 – 4.5 years', name: 'LKG', description: 'A joyful foundation for curiosity, creativity, independence and a love of learning.', color: 'blue', icon: BookOpen },
-    { age: '4.5 – 6 years', name: 'UKG', description: 'Confident preparation for big school through meaningful projects and purposeful play.', color: 'green', icon: Star },
+    { age: '8 Months – 2.5 years', name: 'Day Care', description: 'A gentle first step into group play, discovery and little routines that build confidence.', color: 'red', icon: Baby },
+    { age: '2.5 – 3.0 years', name: 'Playgroup', description: 'Busy hands, bright ideas and playful experiences that grow early language and social skills.', color: 'yellow', icon: Sparkles },
+    { age: '3.0 – 4.0 years', name: 'Pre - KG', description: 'We focus on building confidence, curiosity, and a love for learning, preparing every child for a smooth transition to LKG.', color: 'pink', icon: Sparkles },
+    { age: '4.0 – 5.0 years', name: 'LKG', description: 'A joyful foundation for curiosity, creativity, independence and a love of learning.', color: 'blue', icon: BookOpen },
+    { age: '5.0 – 6.0 years', name: 'UKG', description: 'Confident preparation for big school through meaningful projects and purposeful play.', color: 'green', icon: Star },
 ];
 
 function SectionHeading({ eyebrow, title, text, align = 'left' }: { eyebrow: string; title: string; text?: string; align?: 'left' | 'center' }) {
