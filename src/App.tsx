@@ -11,6 +11,7 @@ import { CtaSection } from './components/CtaSection';
 import { Footer } from './components/Footer';
 
 import { EnquiryModal, supabase } from './components/EnquiryModal';
+import { PopupImage } from './components/PopupImage';
 import Gallery from './components/gallery';
 import Programmes from './components/programmes';
 import { heroSlides, admissionFormUrl } from './data';
@@ -125,6 +126,8 @@ function App() {
       >
         Enquire now <ArrowUpRight size={16} />
       </a>
+
+      <PopupImage />
     </div>
   );
 }
