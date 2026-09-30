@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from 'node:url';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Smartstartmain/',
+  base: '/Smartstart-main/',
   plugins: [react()],
   resolve: {
     alias: {
