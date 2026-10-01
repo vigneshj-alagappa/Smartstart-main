@@ -8,8 +8,8 @@ export function FacilitiesSection() {
         <div className="facilities-header-row">
           <SectionHeading
             eyebrow="Campus & Infrastructure"
-            title="Every space built for happy discoveries."
-            text="Designed from the ground up for early learners. Explore our labs, cheerful classrooms, day care, dining spaces, and outdoor play areas."
+            title="Every space built for happy discoveries"
+            text="Designed from the ground up for early learners Explore our labs, cheerful classrooms, day care, dining spaces, and outdoor play areas"
           />
         </div>
 

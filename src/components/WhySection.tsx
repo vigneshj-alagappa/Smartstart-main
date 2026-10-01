@@ -21,7 +21,7 @@ export function WhySection() {
         <div className="why-copy">
           <SectionHeading
             eyebrow="More than a school"
-            title="A little world made for big becoming."
+            title="A little world made for big becoming"
             text="The early years are full of firsts. We create the kind of place where every first feels exciting, supported and full of possibility."
           />
           <div className="reason-grid">

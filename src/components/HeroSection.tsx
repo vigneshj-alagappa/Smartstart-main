@@ -17,7 +17,7 @@ export function HeroSection({ activeSlide, setActiveSlide }: HeroSectionProps) {
         {/* Copy */}
         <div className="hero-copy animate-in">
           <div className="hero-kicker"><span className="kicker-dot" /> Where little minds bloom</div>
-          <h1>Big dreams<br /><em>start small.</em></h1>
+          <h1>Big dreams<br /><em>start small</em></h1>
           <p className="hero-text">
             A joyful first school where every child is known, nurtured and inspired to discover the world in their own wonderful way.
           </p>

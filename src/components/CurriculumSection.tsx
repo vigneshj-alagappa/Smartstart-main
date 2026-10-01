@@ -9,7 +9,7 @@ export function CurriculumSection() {
         <div className="curriculum-copy">
           <SectionHeading
             eyebrow="Our way of learning"
-            title="Curious minds. Kind hearts. Confident steps."
+            title="Curious minds, Kind hearts, Confident steps."
             text="Our play-led approach brings together the best of structured learning and child-led discovery, so every child gets to learn in a way that feels natural to them."
           />
           <div className="curriculum-points">
