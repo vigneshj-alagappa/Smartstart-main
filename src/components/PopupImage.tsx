@@ -25,15 +25,15 @@ export function PopupImage() {
       }}
       style={{ zIndex: 9999 }}
     >
-      <div 
-        className="popup-image-container" 
-        role="dialog" 
+      <div
+        className="popup-image-container"
+        role="dialog"
         aria-modal="true"
         style={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh' }}
       >
-        <button 
-          className="modal-close" 
-          onClick={() => setIsOpen(false)} 
+        <button
+          className="modal-close"
+          onClick={() => setIsOpen(false)}
           aria-label="Close popup"
           style={{
             position: 'absolute',
@@ -53,9 +53,9 @@ export function PopupImage() {
         >
           <X size={24} color="#333" />
         </button>
-        <img 
-          src={asset('images/Flash image of smartstart admission.png')} 
-          alt="Smart Start Admission" 
+        <img
+          src={asset('images/Admission_Flashcard.png')}
+          alt="Smart Start Admission"
           style={{
             width: 'auto',
             height: 'auto',

@@ -1,19 +1,21 @@
 import { FormEvent, useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { StatsBand } from './components/StatsBand';
-import { WhySection } from './components/WhySection';
 import { CurriculumSection } from './components/CurriculumSection';
-import { FacilitiesSection } from './components/FacilitiesSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { CtaSection } from './components/CtaSection';
 import { Footer } from './components/Footer';
+import { ManagementPage } from './components/ManagementPage';
+import { AboutUsPage } from './components/AboutUsPage';
+import { ProgrammesPage } from './components/ProgrammesPage';
+import { FacilitiesPage } from './components/FacilitiesPage';
+import { GalleryPage } from './components/GalleryPage';
 
 import { EnquiryModal, supabase } from './components/EnquiryModal';
 import { PopupImage } from './components/PopupImage';
-import Gallery from './components/gallery';
-import Programmes from './components/programmes';
 import { heroSlides, admissionFormUrl } from './data';
 
 function App() {
@@ -83,7 +85,7 @@ function App() {
     setSubmitting(false);
   };
 
-  return (
+  const homePage = (
     <div id="top" className="site-shell">
 
       <Navbar
@@ -96,11 +98,7 @@ function App() {
       <main>
         <HeroSection activeSlide={activeHeroSlide} setActiveSlide={setActiveHeroSlide} />
         <StatsBand />
-        <FacilitiesSection />
-        <Programmes />
-        <WhySection />
         <CurriculumSection />
-        <Gallery />
         <TestimonialsSection />
         <CtaSection onEnquire={openEnquiry} />
       </main>
@@ -129,6 +127,17 @@ function App() {
 
       <PopupImage />
     </div>
+  );
+
+  return (
+    <Routes>
+      <Route path="/" element={homePage} />
+      <Route path="/management" element={<ManagementPage />} />
+      <Route path="/about-us" element={<AboutUsPage />} />
+      <Route path="/programmes" element={<ProgrammesPage />} />
+      <Route path="/facilities" element={<FacilitiesPage />} />
+      <Route path="/gallery" element={<GalleryPage />} />
+    </Routes>
   );
 }
 

@@ -45,7 +45,7 @@ export const programmes = [
 
 export const reasons = [
   { title: 'Learning that feels like play', text: 'Every activity is designed to invite curiosity, movement and meaningful discovery.', icon: Sparkles, color: 'yellow' },
-  { title: 'A safe, caring space', text: 'Warm adults, thoughtful routines and child-friendly spaces help little ones feel secure.', icon: ShieldCheck, color: 'blue' },
+  { title: 'A safe, caring space, No Screens Just Activities.', text: 'Warm adults, thoughtful routines and child-friendly spaces help little ones feel secure.', icon: ShieldCheck, color: 'blue' },
   { title: 'Teachers who truly see them', text: 'Our educators notice the small moments and celebrate every child\'s unique spark.', icon: HeartHandshake, color: 'red' },
   { title: 'Room to grow and explore', text: 'Bright classrooms and open-air play areas give growing minds room to move.', icon: Leaf, color: 'green' },
 ];
@@ -123,8 +123,10 @@ export const facilities = [
 ];
 
 export const navItems = [
-  { label: 'About us', href: '#about-us' },
-  { label: 'Programmes', href: '#programmes' },
-  { label: 'Facilities', href: '#facilities' },
-  { label: 'Gallery', href: '#gallery' },
+  { label: 'Home', href: '/' },
+  { label: 'About us', href: '/about-us' },
+  { label: 'Management', href: '/management' },
+  { label: 'Programmes', href: '/programmes' },
+  { label: 'Facilities', href: '/facilities' },
+  { label: 'Gallery', href: '/gallery' },
 ];

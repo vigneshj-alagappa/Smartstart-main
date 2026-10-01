@@ -1,4 +1,5 @@
 import { ArrowUpRight, Mail, MapPin, Menu, Phone, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { navItems, admissionFormUrl } from '../data';
 
@@ -50,11 +51,17 @@ export function Navbar({ scrolled, menuOpen, setMenuOpen, onEnquire }: NavbarPro
         <div className="container nav-inner">
           <Logo />
           <nav className={`main-nav ${menuOpen ? 'is-open' : ''}`}>
-            {navItems.map((item) => (
-              <a key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.href.startsWith('/') ? (
+                <Link key={item.label} to={item.href} onClick={() => setMenuOpen(false)}>
+                  {item.label}
+                </Link>
+              ) : (
+                <a key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>
+                  {item.label}
+                </a>
+              )
+            )}
             <a className="button button-small button-red nav-mobile-cta" href={admissionFormUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
               Enquire now <ArrowUpRight size={16} />
             </a>
