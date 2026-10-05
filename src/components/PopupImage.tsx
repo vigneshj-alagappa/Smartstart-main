@@ -54,7 +54,7 @@ export function PopupImage() {
           <X size={24} color="#333" />
         </button>
         <img
-          src={asset('images/Admission_Flashcard.png')}
+          src={asset('images/Vijayadhasami_Preschool_Admission_Banner.png')}
           alt="Smart Start Admission"
           style={{
             width: 'auto',
