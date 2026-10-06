@@ -18,6 +18,29 @@ function WhatsAppIcon({ size = 16 }: { size?: number }) {
   );
 }
 
+const MAIL_ADDRESS = 'smartstartplayschool@alagappa.org';
+
+// Try the default mail app first; if nothing takes focus away from the page, fall back to Gmail on the web.
+function openMail(e: React.MouseEvent<HTMLAnchorElement>) {
+  e.preventDefault();
+  let handled = false;
+  const markHandled = () => { handled = true; };
+  window.addEventListener('blur', markHandled, { once: true });
+  document.addEventListener('visibilitychange', markHandled, { once: true });
+  window.location.href = `mailto:${MAIL_ADDRESS}`;
+  window.setTimeout(() => {
+    window.removeEventListener('blur', markHandled);
+    document.removeEventListener('visibilitychange', markHandled);
+    if (!handled) {
+      window.open(
+        `https://mail.google.com/mail/?view=cm&fs=1&to=${MAIL_ADDRESS}`,
+        '_blank',
+        'noopener,noreferrer'
+      );
+    }
+  }, 1000);
+}
+
 export function Navbar({ scrolled, menuOpen, setMenuOpen, onEnquire }: NavbarProps) {
   return (
     <>
@@ -38,7 +61,7 @@ export function Navbar({ scrolled, menuOpen, setMenuOpen, onEnquire }: NavbarPro
 
           {/* Right side – contact info */}
           <div className="utility-links">
-            <a href="mailto:smartstartplayschool@alagappa.org">
+            <a href={`mailto:${MAIL_ADDRESS}`} onClick={openMail}>
               <Mail size={14} /> smartstartplayschool@alagappa.org
             </a>
             <a

@@ -30,7 +30,7 @@ export function HeroSection({ activeSlide, setActiveSlide }: HeroSectionProps) {
             >
               Begin their journey <ArrowRight size={18} />
             </a>
-            <a className="play-link" href="#facilities">
+            <a className="play-link" href="facilities">
               <span className="play-circle"><Play size={15} fill="currentColor" /></span> Explore facilities
             </a>
           </div>

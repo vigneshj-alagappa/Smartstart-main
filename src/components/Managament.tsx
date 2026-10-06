@@ -1,4 +1,4 @@
-﻿import { SectionHeading } from './SectionHeading';
+import { SectionHeading } from './SectionHeading';
 import { asset } from '../data';
 
 const leaders = [
@@ -42,20 +42,69 @@ const leaders = [
             "Dr. (Mrs.) Umayal Ramanathan was awarded the Doctor of Letters Honoris causa by the Honourable Governor of Tamil Nadu. In recognition of her outstanding services to society, Dr. Mrs. Umayal Ramanathan was awarded the prestigious Indira Gandhi Priyadarshini Award for National Integration and National Unity. She was also honoured with a Doctorate Degree by the University of Madras on its 150th Convocation by His Excellency, the Governor of Tamil Nadu.",
         ],
     },
-    {
-        photo: asset('images/Administrator.jpg'),
-        name: "Mrs. P. VIDHYALAKSHMI",
-        role: 'Administrator\nB.A., LL.M, PGDHRM, M.A (CC.E), M.Sc. Psychology (Specialization in Child Psychology)',
-        bio: [
-            "Childhood is not just a phase of growing; it is a magical season of becoming. Every smile, every question, every tiny step forward carries within it the promise of a brighter tomorrow. As a play school Administrator, I feel deeply blessed to witness these precious beginnings — where curiosity blossoms, confidence takes root and innocence paints the world with wonder.",
-            "Our Smart Start Play School is more than a place of learning; it is a nurturing space where children feel safe to explore, express, and evolve. We believe that early childhood is the foundation upon which lifelong learning and emotional resilience are built. Through play, discovery, and meaningful relationships, we gently guide each child to develop not only academically but socially, emotionally, and creatively.",
-            "Each day, I watch children transform simple moments into extraordinary experiences — turning imagination into stories, friendships into lifelong lessons, and challenges into opportunities for growth. Their laughter reminds us that learning is joyful, and their questions inspire us to keep nurturing curiosity with patience and love.",
-            "We strongly believe that education is a partnership between school and family. When parents, teachers, and caregivers walk together with shared values and trust, children flourish in remarkable ways. Together, we create an environment where every child feels seen, heard, and celebrated for who they are.",
-            "As we continue this beautiful journey, our commitment remains unwavering — to provide a holistic, child-centered environment that respects individuality, encourages exploration, and builds strong emotional foundations. Because in every little hand we hold today lies the future we shape tomorrow.",
-        ],
-        closing: "With warmth and gratitude,",
-    },
 ];
+
+const administrator = {
+    photo: asset('images/Administrator.jpg'),
+    name: "Mrs. P. VIDHYALAKSHMI",
+    role: 'Administrator\nB.A., LL.M, PGDHRM, M.A (CC.E), M.Sc. Psychology (Specialization in Child Psychology)',
+    bio: [
+        "Childhood is not just a phase of growing; it is a magical season of becoming. Every smile, every question, every tiny step forward carries within it the promise of a brighter tomorrow. As a play school Administrator, I feel deeply blessed to witness these precious beginnings — where curiosity blossoms, confidence takes root and innocence paints the world with wonder.",
+        "Our Smart Start Play School is more than a place of learning; it is a nurturing space where children feel safe to explore, express, and evolve. We believe that early childhood is the foundation upon which lifelong learning and emotional resilience are built. Through play, discovery, and meaningful relationships, we gently guide each child to develop not only academically but socially, emotionally, and creatively.",
+        "Each day, I watch children transform simple moments into extraordinary experiences — turning imagination into stories, friendships into lifelong lessons, and challenges into opportunities for growth. Their laughter reminds us that learning is joyful, and their questions inspire us to keep nurturing curiosity with patience and love.",
+        "We strongly believe that education is a partnership between school and family. When parents, teachers, and caregivers walk together with shared values and trust, children flourish in remarkable ways. Together, we create an environment where every child feels seen, heard, and celebrated for who they are.",
+        "As we continue this beautiful journey, our commitment remains unwavering — to provide a holistic, child-centered environment that respects individuality, encourages exploration, and builds strong emotional foundations. Because in every little hand we hold today lies the future we shape tomorrow.",
+    ],
+};
+
+type Leader = {
+    photo: string;
+    name: string;
+    role: string;
+    bio: string[];
+    closing?: string;
+};
+
+function LeaderCard({ leader }: { leader: Leader }) {
+    return (
+        <div className="management-card">
+            <div className="management-photo-wrap">
+                <img src={leader.photo} alt={leader.name} className="management-photo" />
+            </div>
+            <div className="management-info">
+                <h3 className="management-name">{leader.name}</h3>
+                {leader.role.split('\n').map((line, i) => (
+                    <p className="management-role" key={i}>{line}</p>
+                ))}
+                <div className="management-bio">
+                    {leader.bio.map((para, i) => (
+                        <p key={i}>{para}</p>
+                    ))}
+                    {leader.closing && (
+                        <p className="management-closing">{leader.closing}</p>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export function AdministratorSection() {
+    return (
+        <section id="administrator" className="section management-section">
+            <div className="container">
+                <SectionHeading
+                    eyebrow="Smart Start Play School"
+                    title="From the Administrator"
+                    align="center"
+                />
+                <div className="management-list">
+                    <LeaderCard leader={administrator} />
+                </div>
+            </div>
+        </section>
+    );
+}
 
 export function Management() {
     return (

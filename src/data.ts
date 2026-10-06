@@ -45,27 +45,18 @@ export const programmes = [
 
 export const reasons = [
   { title: 'Learning that feels like play', text: 'Every activity is designed to invite curiosity, movement and meaningful discovery.', icon: Sparkles, color: 'yellow' },
-  { title: 'A safe, caring space, No Screens Just Activities.', text: 'Warm adults, thoughtful routines and child-friendly spaces help little ones feel secure.', icon: ShieldCheck, color: 'blue' },
+  { title: 'Caring & screen-Free activities', text: 'With caring support, joyful routines, and hands-on activities, children discover the world through play—not screens.', icon: ShieldCheck, color: 'blue' },
   { title: 'Teachers who truly see them', text: 'Our educators notice the small moments and celebrate every child\'s unique spark.', icon: HeartHandshake, color: 'red' },
   { title: 'Room to grow and explore', text: 'Bright classrooms and open-air play areas give growing minds room to move.', icon: Leaf, color: 'green' },
 ];
 
 export const testimonials = [
-  { quote: 'The happiness in my child is the best review. Every morning she runs in with a smile and comes home with a new story.', name: 'Priya R.', role: 'Parent of Ananya, Nursery', initials: 'PR', color: 'red' },
+  { quote: 'The happiness in my child is the best review. Every morning she runs in with a smile and comes home with a new story.', name: 'Priya R.', role: 'Parent of Ananya, LKG', initials: 'PR', color: 'red' },
   { quote: 'We can see the difference in his confidence every week. The teachers are so patient, warm and genuinely invested.', name: 'Karthik S.', role: 'Parent of Arjun, Playgroup', initials: 'KS', color: 'blue' },
   { quote: 'Alagappa Smart Start feels like a second home. It is joyful, structured and exactly what our little one needed.', name: 'Meena V.', role: 'Parent of Tara, Kindergarten', initials: 'MV', color: 'green' },
 ];
 
 export const facilities = [
-  {
-    title: 'Computer Lab',
-    tag: 'Digital Learning',
-    description:
-      'Our Computer Lab is designed to provide a modern, spacious, and comfortable learning environment. It is equipped with the latest hardware and software to support a wide range of academic and practical computing needs.',
-    image: asset('images/facilities/computer-lab.png'),
-    icon: Monitor,
-    color: 'blue',
-  },
   {
     title: 'Kindergarten Classroom',
     tag: 'Creative Play',
@@ -123,9 +114,8 @@ export const facilities = [
 ];
 
 export const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About us', href: '/about-us' },
   { label: 'Management', href: '/management' },
+  { label: 'About us', href: '/about-us' },
   { label: 'Programmes', href: '/programmes' },
   { label: 'Facilities', href: '/facilities' },
   { label: 'Gallery', href: '/gallery' },

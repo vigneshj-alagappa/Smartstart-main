@@ -1,9 +1,10 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { WhySection } from './WhySection';
 import { SectionHeading } from './SectionHeading';
 import { asset } from '../data';
+import { AdministratorSection } from './Managament';
 
 function InfrastructureSection() {
     return (
@@ -79,6 +80,7 @@ export function AboutUsPage() {
             <main style={{ paddingBottom: '64px' }}>
                 <WhySection />
                 <InfrastructureSection />
+                <AdministratorSection />
             </main>
             <Footer />
         </div>

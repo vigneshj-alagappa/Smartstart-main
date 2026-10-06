@@ -38,7 +38,6 @@ export function WhySection() {
             ))}
           </div>
           <a className="text-link" href="#curriculum">
-            Discover our difference <ArrowRight size={17} />
           </a>
         </div>
       </div>
