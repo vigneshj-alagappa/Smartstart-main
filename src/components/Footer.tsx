@@ -1,4 +1,5 @@
 import { ArrowRight, ArrowUpRight, Instagram, MessageCircle, Youtube } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { admissionFormUrl } from '../data';
 
@@ -13,27 +14,27 @@ export function Footer() {
           <div className="social-links">
             <a href="https://www.instagram.com/alagappa_smartstart?stkn=MTdnd3dxZXZuN3M5ZQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
             <a href="https://youtube.com/@thealagappagroup1288?si=hbijHfVYN7B4Rfv2" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><Youtube size={18} /></a>
-            <a href="#top" aria-label="Message us"><MessageCircle size={18} /></a>
+            <a href="https://wa.me/918098533000" target="_blank" rel="noopener noreferrer" aria-label="Message us"><MessageCircle size={18} /></a>
           </div>
         </div>
 
         {/* Explore links */}
         <div className="footer-column">
           <h3>Explore</h3>
-          {/* <a href="#programmes">Programmes</a> */}
-          <a href="#about-us">About us</a>
-          <a href="#curriculum">Our curriculum</a>
-          <a href="#facilities">Campus facilities</a>
-          <a href="#gallery">Gallery</a>
+          {/* <Link to="/programmes">Programmes</Link> */}
+          <Link to="/about-us">About us</Link>
+          <Link to="/programmes">Our curriculum</Link>
+          <Link to="/facilities">Campus facilities</Link>
+          <Link to="/gallery">Gallery</Link>
         </div>
 
         {/* For families */}
         <div className="footer-column">
           <h3>For families</h3>
-          <a href="#about-us">Admissions</a>
-          <a href="#about-us">School tour</a>
-          <a href="#about-us">About our school</a>
-          <a href="#top">Talk to us</a>
+          <a href={admissionFormUrl} target="_blank" rel="noopener noreferrer">Admissions</a>
+          <Link to="/facilities">School tour</Link>
+          <Link to="/about-us">About our school</Link>
+          <a href="tel:8098533000">Talk to us</a>
         </div>
 
         {/* Newsletter - hidden

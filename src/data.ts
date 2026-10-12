@@ -62,7 +62,7 @@ export const facilities = [
     tag: 'Creative Play',
     description:
       'A vibrant world of learning Where curiosity meets creativity, Encouraging holistic Growth through interactive Experiences and Joyful learning moments.',
-    image: asset('images/facilities/kindergarten-classroom.png'),
+    image: asset('images/facilities/kindergarten-classroom1.png'),
     icon: Sparkles,
     color: 'yellow',
   },
